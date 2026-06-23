@@ -7,7 +7,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap');
-/* ── CENTRAL BARBER DESIGN SYSTEM ── */
+/* \u2500\u2500 CENTRAL BARBER DESIGN SYSTEM \u2500\u2500 */
 :root{
   --bg:#0F1E17;--bg2:#0A1610;--surface:#162B1F;--card:#1C3527;--card2:#223D2E;
   --gold:#C79A4A;--gold2:#E8C875;--gold-dim:#8A6830;
@@ -55,7 +55,7 @@ label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-b
 .toast-info{background:var(--card2);color:var(--text);border:1px solid var(--line);}
 @keyframes tIn{from{opacity:0;transform:translateX(-50%) translateY(8px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
 
-/* ── LANDING ── */
+/* \u2500\u2500 LANDING \u2500\u2500 */
 .lp-wrap{
   min-height:100vh;
   background:radial-gradient(ellipse 100% 80% at 50% 0%,#1B3A2F 0%,var(--bg2) 70%);
@@ -89,7 +89,7 @@ label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-b
 .lp-barber-btn:hover{background:rgba(199,154,74,.14);color:var(--gold);border-color:rgba(199,154,74,.4);}
 .lp-footer{margin-top:48px;font-size:11.5px;color:rgba(255,255,255,.12);letter-spacing:.05em;}
 
-/* ── AUTH ── */
+/* \u2500\u2500 AUTH \u2500\u2500 */
 .auth-wrap{min-height:100vh;background:radial-gradient(ellipse 100% 80% at 50% 0%,#1B3A2F 0%,var(--bg2) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;}
 .auth-card{width:100%;max-width:420px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:28px 26px 24px;}
 .auth-brand{text-align:center;margin-bottom:22px;}
@@ -102,7 +102,7 @@ label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-b
 .auth-confirm{background:rgba(39,174,96,.1);border:1.5px solid rgba(39,174,96,.3);border-radius:12px;padding:18px;text-align:center;}.auth-confirm h3{font-size:16px;font-weight:700;color:var(--green);margin-bottom:6px;}.auth-confirm p{font-size:13.5px;color:var(--muted);line-height:1.5;}
 .auth-back{background:none;border:none;color:rgba(255,255,255,.3);font-size:13px;cursor:pointer;margin-top:14px;font-family:var(--font-body);touch-action:manipulation;}.auth-back:hover{color:rgba(255,255,255,.6);}
 
-/* ── SETUP ── */
+/* \u2500\u2500 SETUP \u2500\u2500 */
 .setup-wrap{max-width:600px;margin:0 auto;padding:28px 18px 56px;}
 .setup-head{text-align:center;margin-bottom:28px;}
 .setup-head h1{font-family:var(--font-display);font-size:28px;color:var(--text);letter-spacing:-0.5px;}
@@ -116,21 +116,90 @@ label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-b
 .add-svc{background:none;border:1.5px dashed var(--line);border-radius:10px;padding:11px;width:100%;font-size:14px;color:var(--subtle);cursor:pointer;margin-top:4px;font-family:var(--font-body);touch-action:manipulation;}.add-svc:hover{border-color:var(--gold);color:var(--gold);}
 .day-btn{padding:6px 11px;border-radius:8px;border:1.5px solid var(--line);background:var(--card);color:var(--muted);font-size:13px;cursor:pointer;transition:.15s;font-family:var(--font-body);touch-action:manipulation;}.day-btn.closed{background:var(--red-dim);color:var(--red);border-color:var(--red);}
 
-/* ── ADMIN ── */
-.admin-wrap{display:flex;flex-direction:column;min-height:100vh;}
-.admin-hdr{background:var(--bg2);color:var(--text);padding:0 18px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line);}
+/* \u2500\u2500 ADMIN \u2500\u2500 */
 
+/* Layout raiz */
+.admin-wrap{display:flex;flex-direction:column;min-height:100vh;}
+
+/* Topo */
+.admin-hdr{background:var(--bg2);color:var(--text);padding:0 18px;height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;border-bottom:1px solid var(--line);}
 .admin-logo{font-family:var(--font-display);font-size:17px;color:var(--text);letter-spacing:-0.5px;}.admin-logo em{color:var(--gold);font-style:normal;}
-.shop-tag{font-size:12px;color:var(--gold);font-weight:600;margin-left:8px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;opacity:.8;}
-.icon-btn{background:rgba(199,154,74,.1);border:1px solid rgba(199,154,74,.15);color:var(--text);width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;touch-action:manipulation;transition:.15s;}.icon-btn:hover{background:rgba(199,154,74,.2);}
-.admin-nav{background:var(--surface);border-bottom:1px solid var(--line);display:flex;padding:0 10px;overflow-x:auto;}.admin-nav::-webkit-scrollbar{display:none;}
-.nav-tab{padding:13px 14px;font-size:13px;font-weight:600;color:var(--subtle);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:.15s;white-space:nowrap;touch-action:manipulation;font-family:var(--font-body);}.nav-tab.on{color:var(--gold);border-bottom-color:var(--gold);}
-.admin-body{flex:1;padding:20px 18px 56px;max-width:720px;margin:0 auto;width:100%;}
+.shop-tag{font-size:11px;color:var(--gold);font-weight:700;margin-left:10px;background:rgba(199,154,74,.12);border:1px solid rgba(199,154,74,.2);padding:3px 8px;border-radius:20px;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:.3px;}
+.icon-btn{background:rgba(199,154,74,.08);border:1px solid rgba(199,154,74,.15);color:var(--muted);width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;touch-action:manipulation;transition:.15s;}.icon-btn:hover{background:rgba(199,154,74,.18);color:var(--text);}
+
+/* Nav \u2014 bottom bar mobile, sidebar desktop */
+.admin-nav{
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+  display:flex;
+  position:fixed;bottom:0;left:0;right:0;
+  z-index:20;
+  padding:0;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.admin-nav::-webkit-scrollbar{display:none;}
+
+.nav-tab{
+  flex:1;min-width:64px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  padding:8px 4px 10px;
+  font-size:9.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;
+  color:var(--subtle);
+  background:none;border:none;cursor:pointer;
+  border-top:2px solid transparent;
+  touch-action:manipulation;
+  font-family:var(--font-body);
+  transition:.15s;
+  white-space:nowrap;
+}
+.nav-tab .ni{font-size:18px;line-height:1;display:block;}
+.nav-tab.on{color:var(--gold);border-top-color:var(--gold);background:rgba(199,154,74,.05);}
+.nav-tab:hover:not(.on){color:var(--text);}
+
+/* Conte\u00fado \u2014 padding bottom para n\u00e3o ficar atr\u00e1s da nav */
+.admin-body{flex:1;padding:20px 18px 88px;max-width:720px;margin:0 auto;width:100%;}
+
+/* Desktop: sidebar */
+@media(min-width:700px){
+  .admin-wrap{flex-direction:row;padding-top:0;}
+  .admin-hdr{
+    position:fixed;top:0;left:0;right:0;
+    height:52px;
+    z-index:30;
+  }
+  .admin-main{
+    display:flex;flex:1;margin-top:52px;min-height:calc(100vh - 52px);
+  }
+  .admin-nav{
+    position:fixed;top:52px;left:0;bottom:0;right:auto;
+    flex-direction:column;
+    width:72px;
+    border-top:none;border-right:1px solid var(--line);
+    overflow-x:visible;overflow-y:auto;
+    padding:8px 0;
+    justify-content:flex-start;
+  }
+  .nav-tab{
+    flex:none;width:72px;
+    padding:12px 6px;
+    font-size:9px;
+    border-top:none;
+    border-right:3px solid transparent;
+  }
+  .nav-tab.on{border-right-color:var(--gold);border-top-color:transparent;background:rgba(199,154,74,.07);}
+  .admin-body{
+    margin-left:72px;
+    padding:24px 28px 40px;
+    max-width:800px;
+  }
+}
 /* DASHBOARD */
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;}
-.stat-card{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:16px;}
+.stat-card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;}
+.stat-num{font-size:28px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-1px;}
+.stat-label{font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;}
 .stat-num{font-family:var(--font-display);font-size:32px;color:var(--gold);line-height:1;letter-spacing:-1px;}.stat-label{font-size:12px;color:var(--muted);margin-top:4px;line-height:1.4;}
-.dash-sec{font-family:var(--font-display);font-size:16px;color:var(--text);letter-spacing:-0.5px;margin:22px 0 12px;}
+.dash-sec{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin:22px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);}
 .rel-subtabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1.5px solid var(--line);padding-bottom:0;}
 .rel-stab{padding:9px 16px;font-size:13px;font-weight:600;color:var(--subtle);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1.5px;transition:.15s;font-family:var(--font-body);white-space:nowrap;}
 .rel-stab.on{color:var(--gold);border-bottom-color:var(--gold);}
@@ -227,14 +296,14 @@ label{display:block;font-size:12.5px;font-weight:600;color:var(--muted);margin-b
 <body>
 <div id="app"><div class="loadscreen"><div class="spinner"></div></div></div>
 <script>
-/* ── CONFIG ── */
+/* \u2500\u2500 CONFIG \u2500\u2500 */
 const SUPABASE_URL  = 'https://gxhjceiuvvsumkedyyjl.supabase.co';
 const SUPABASE_ANON = 'sb_publishable_pi84w4wcglGi7os9aS2lIw_6AL03frM';
 const SUPABASE_JWT  = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd4aGpjZWl1dnZzdW1rZWR5eWpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODIxMDU3MzQsImV4cCI6MjA5NzY4MTczNH0.vFPvzLMfa9NM5KF3U4B6XHgUlZDz54rd0pk4ALZdqEc';
 const { createClient } = supabase;
 const db = createClient(SUPABASE_URL, SUPABASE_ANON);
 
-/* ── STATE ── */
+/* \u2500\u2500 STATE \u2500\u2500 */
 const S = {
   session:null, shop:null, svcs:[], schedules:[], blocked:[],
   tab:'dashboard', aDate:today(),
@@ -254,7 +323,7 @@ function canCancel(date, time, cancelHours){
   return hoursUntil(date, time) > h;
 }
 
-/* ── UTILS ── */
+/* \u2500\u2500 UTILS \u2500\u2500 */
 function today(){ const d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
 function pad(n){ return String(n).padStart(2,'0'); }
 function toMin(t){ const [h,m]=t.split(':').map(Number); return h*60+m; }
@@ -286,7 +355,7 @@ function showModal(html){
 function closeModal(){ const m=$i('modal-ov'); if(m) m.remove(); }
 function clearOverlays(){ document.querySelectorAll('.modal-overlay').forEach(e=>e.remove()); }
 
-/* ── DB HELPERS (direct fetch, bypass client for reliability) ── */
+/* \u2500\u2500 DB HELPERS (direct fetch, bypass client for reliability) \u2500\u2500 */
 async function _db(method, table, params, body, userToken, prefer){
   const qs=Object.entries(params||{}).map(([k,v])=>k+'='+encodeURIComponent(String(v))).join('&');
   const url=SUPABASE_URL+'/rest/v1/'+table+(qs?'?'+qs:'');
@@ -315,7 +384,7 @@ const dbPatch=(t,p,b,tk)=>_db('PATCH', t,p,b,tk);
 const dbDel =(t,p,tk)   =>_db('DELETE',t,p,null,tk);
 const dbUpsert=(t,conflict,b,tk)=>_db('POST',t,{'on_conflict':conflict},b,tk,'resolution=merge-duplicates,return=representation');
 
-/* ── ROUTER ── */
+/* \u2500\u2500 ROUTER \u2500\u2500 */
 async function init(){
   const slug=new URLSearchParams(location.search).get('shop');
   try{
@@ -351,7 +420,7 @@ async function loadOwner(){
   }catch(e){ console.error('loadOwner:',e.message); }
 }
 
-/* ── LANDING ── */
+/* \u2500\u2500 LANDING \u2500\u2500 */
 let _lpT=null;
 function showLanding(){
   clearOverlays();
@@ -413,7 +482,7 @@ async function lpSearch(q){
   }
 }
 
-/* ── AUTH ── */
+/* \u2500\u2500 AUTH \u2500\u2500 */
 function showAuth(mode){
   clearOverlays();
   const isSU=mode==='signup';
@@ -502,7 +571,7 @@ async function doNewPw(){
   showAuth('login');
 }
 
-/* ── SETUP ── */
+/* \u2500\u2500 SETUP \u2500\u2500 */
 let setupSvcs=[];
 function showSetup(){
   clearOverlays();
@@ -591,28 +660,30 @@ async function doSetup(){
   }
 }
 
-/* ── ADMIN ── */
+/* \u2500\u2500 ADMIN \u2500\u2500 */
 function showAdmin(){
   clearOverlays();
   document.getElementById('app').innerHTML=
     '<div class="admin-wrap">'
     +'<header class="admin-hdr">'
-      +'<div style="display:flex;align-items:center;">'
+      +'<div style="display:flex;align-items:center;gap:0;">'
         +'<span class="admin-logo">CENTRAL <em>BARBER</em></span>'
         +'<span class="shop-tag">'+sanitize(S.shop.name)+'</span>'
       +'</div>'
       +'<button class="icon-btn" title="Sair" onclick="db.auth.signOut()" type="button"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>'
     +'</header>'
+    +'<div class="admin-main">'
     +'<nav class="admin-nav">'
-      +'<button class="nav-tab on" data-tab="dashboard" onclick="switchTab(\'dashboard\')" type="button">\ud83d\udcca Dashboard</button>'
-      +'<button class="nav-tab" data-tab="agenda" onclick="switchTab(\'agenda\')" type="button">\ud83d\udcc5 Agenda</button>'
-      +'<button class="nav-tab" data-tab="clients" onclick="switchTab(\'clients\')" type="button">\ud83d\udc64 Clientes</button>'
-      +'<button class="nav-tab" data-tab="services" onclick="switchTab(\'services\')" type="button">\u2702\ufe0f Servi\u00e7os</button>'
-      +'<button class="nav-tab" data-tab="avail" onclick="switchTab(\'avail\')" type="button">\ud83d\udcc6 Disponibilidade</button>'
-      +'<button class="nav-tab" data-tab="config" onclick="switchTab(\'config\')" type="button">\u2699\ufe0f Barbearia</button>'
-      +'<button class="nav-tab" data-tab="relatorios" onclick="switchTab(\'relatorios\')" type="button">\ud83d\udcca Relat\u00f3rios</button>'
+      +'<button class="nav-tab on" data-tab="dashboard" onclick="switchTab(\'dashboard\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span>In\u00edcio</button>'
+      +'<button class="nav-tab" data-tab="agenda" onclick="switchTab(\'agenda\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>Agenda</button>'
+      +'<button class="nav-tab" data-tab="clients" onclick="switchTab(\'clients\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Clientes</button>'
+      +'<button class="nav-tab" data-tab="services" onclick="switchTab(\'services\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4"/><path d="M3 17l9 4 9-4"/></svg></span>Servi\u00e7os</button>'
+      +'<button class="nav-tab" data-tab="avail" onclick="switchTab(\'avail\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Hor\u00e1rios</button>'
+      +'<button class="nav-tab" data-tab="relatorios" onclick="switchTab(\'relatorios\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>Relat\u00f3rios</button>'
+      +'<button class="nav-tab" data-tab="config" onclick="switchTab(\'config\')" type="button"><span class="ni"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></span>Config</button>'
     +'</nav>'
     +'<div class="admin-body" id="admin-body"></div>'
+    +'</div>'
     +'</div>';
   S.tab='dashboard'; renderTab();
 }
@@ -686,17 +757,22 @@ async function renderDashboard(){
 
     }
     b.innerHTML=
-      '<div class="stat-grid">'
-      +'<div class="stat-card"><div style="font-size:20px;margin-bottom:6px;">\ud83d\udcc5</div><div class="stat-num">'+todC+'</div><div class="stat-label">Hoje<br><span style="color:var(--gold);font-weight:600;">'+fPrice(todR)+'</span></div></div>'
-      +'<div class="stat-card"><div style="font-size:20px;margin-bottom:6px;">\ud83d\udcc6</div><div class="stat-num">'+monC+'</div><div class="stat-label">Este m\u00eas</div></div>'
-      +'<div class="stat-card"><div style="font-size:20px;margin-bottom:6px;">\ud83d\udcb0</div><div class="stat-num" style="font-size:22px;">'+fPrice(monR)+'</div><div class="stat-label">Faturamento m\u00eas</div></div>'
-      +'<div class="stat-card"><div style="font-size:20px;margin-bottom:6px;">\ud83d\udc64</div><div class="stat-num">'+uC+'</div><div class="stat-label">Clientes \u00fanicos m\u00eas</div></div>'
+      '<div style="margin-bottom:22px;">'
+      +'<div style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Painel</div>'
+      +'<div style="font-size:20px;font-weight:800;color:var(--text);letter-spacing:-.3px;">'+sanitize(S.shop.name)+'</div>'
+      +'<div style="font-size:12px;color:var(--muted);margin-top:2px;">'+fDate(tod)+'</div>'
       +'</div>'
-      +'<div class="dash-sec">Agendamentos da Semana</div>'
+      +'<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;">'
+      +'<div style="background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;"><div style="color:var(--muted);margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div style="font-size:26px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-1px;">'+todC+'</div><div style="font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;">Hoje</div><div style="font-size:13px;color:var(--gold);font-weight:700;margin-top:3px;">'+fPrice(todR)+'</div></div>'
+      +'<div style="background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;"><div style="color:var(--muted);margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div style="font-size:26px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-1px;">'+monC+'</div><div style="font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;">Este m\u00eas</div></div>'
+      +'<div style="background:rgba(199,154,74,.06);border:1.5px solid rgba(199,154,74,.25);border-radius:14px;padding:16px 18px;"><div style="color:var(--muted);margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div style="font-size:26px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-1px;">'+fPrice(monR)+'</div><div style="font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;">Faturamento</div></div>'
+      +'<div style="background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;"><div style="color:var(--muted);margin-bottom:10px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div style="font-size:26px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-1px;">'+uC+'</div><div style="font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;">Clientes \u00fanicos</div></div>'
+      +'</div>'
+      +'<div class="dash-sec">Pr\u00f3ximos agendamentos</div>'
       +weekList
-      +'<div class="dash-sec" style="margin-top:24px;">Agendamentos \u2014 \u00faltimos 14 dias</div>'
+      +'<div class="dash-sec" style="margin-top:28px;">\u00daltimos 14 dias</div>'
       +'<div class="chart-wrap">'+drawBarChart(days.map(d=>byDay[d]||0),days.map(d=>{const dt=new Date(d+'T00:00:00');return pad(dt.getDate())+'/'+pad(dt.getMonth()+1);}),days)+'</div>'
-      +(ranking.length?'<div class="dash-sec">Servi\u00e7os mais vendidos (m\u00eas)</div><div>'+ranking.map(([name,count],i)=>'<div class="rank-item"><div class="rank-num">'+(i+1)+'\u00ba</div><div class="rank-info"><div class="rank-name">'+sanitize(name)+'</div><div class="rank-count">'+count+' agendamento'+(count>1?'s':'')+'</div></div><div class="rank-bar-wrap"><div class="rank-bar" style="width:'+Math.round(count/maxR*100)+'%"></div></div></div>').join('')+'</div>':'');
+      +(ranking.length?'<div class="dash-sec" style="margin-top:28px;">Top servi\u00e7os do m\u00eas</div><div>'+ranking.map(([name,count],i)=>'<div class="rank-item"><div class="rank-num">'+(i+1)+'\u00ba</div><div class="rank-info"><div class="rank-name">'+sanitize(name)+'</div><div class="rank-count">'+count+' agendamento'+(count>1?'s':'')+'</div></div><div class="rank-bar-wrap"><div class="rank-bar" style="width:'+Math.round(count/maxR*100)+'%"></div></div></div>').join('')+'</div>':'');
   }catch(e){
     const b2=$i('admin-body'); if(b2) b2.innerHTML='<div class="empty">\u26a0\ufe0f Erro ao carregar dashboard: '+sanitize(e.message)+'<br><button class="btn btn-g" style="margin-top:12px;" onclick="renderDashboard()" type="button">Tentar novamente</button></div>';
   }
@@ -715,13 +791,13 @@ async function dashConfirmCancel(id){
   }catch(e){ toastErr('Erro: '+e.message); }
 }
 
-/* ── Gráfico de barras ─────────────────────────────────────────── */
+/* \u2500\u2500 Gr\u00e1fico de barras \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 function drawBarChart(data, labels, days){
   const n = data.length;
   const max = Math.max(...data, 1);
   const total = data.reduce((s,v)=>s+v,0);
 
-  /* Altura útil das barras: sempre proporcional ao max real */
+  /* Altura \u00fatil das barras: sempre proporcional ao max real */
   const H = 130, PB = 28, PT = 14;
   const innerH = H - PT - PB;
 
@@ -737,7 +813,7 @@ function drawBarChart(data, labels, days){
     const bh = Math.round((v/max)*innerH);
     const x  = i*(bw+bGap);
     const y  = PT + innerH - bh;
-    /* mostrar label a cada 2 dias para não sufocar */
+    /* mostrar label a cada 2 dias para n\u00e3o sufocar */
     const showLbl = (n<=7) || (i%2===0);
     const lbl = showLbl
       ? '<text x="'+(x+bw/2)+'" y="'+(H-PB+12)+'" text-anchor="middle" font-size="8.5" fill="#4A6E58">'+labels[i]+'</text>'
@@ -825,7 +901,7 @@ async function openChartDayModal(dayStr, lbl, count){
     if(body) body.innerHTML='<div class="empty">\u26a0\ufe0f '+sanitize(e.message)+'</div>';
   }
 }
-/* ── fim: Gráfico ───────────────────────────────────────────────── */
+/* \u2500\u2500 fim: Gr\u00e1fico \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 
 async function renderAgenda(){
   const b=$i('admin-body'); if(!b) return;
@@ -886,7 +962,7 @@ async function renderAgenda(){
 }
 function shiftDate(d){ const dt=new Date(S.aDate+'T00:00:00'); dt.setDate(dt.getDate()+d); S.aDate=dt.getFullYear()+'-'+pad(dt.getMonth()+1)+'-'+pad(dt.getDate()); renderAgenda(); }
 
-/* ── Novo agendamento (admin) ───────────────────────────────────── */
+/* \u2500\u2500 Novo agendamento (admin) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 function openAddApptModal(){
   if(!S.svcs||!S.svcs.length){
     toastErr('Cadastre ao menos um servi\u00e7o antes de agendar.');
@@ -983,7 +1059,7 @@ async function saveAdminAppt(){
     if(btn){ btn.disabled=false; btn.textContent='Salvar'; }
   }
 }
-/* ── fim: Novo agendamento (admin) ──────────────────────────────── */
+/* \u2500\u2500 fim: Novo agendamento (admin) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 
 function adminCancelAppt(id){
   showModal('<h3>Cancelar agendamento?</h3><p class="modal-sub">O hor\u00e1rio ser\u00e1 liberado e o hist\u00f3rico mantido.</p><div class="modal-footer"><button class="btn btn-g" onclick="closeModal()" type="button">Voltar</button><button class="btn btn-r" onclick="confirmAdminCancel(\''+id+'\')" type="button">Confirmar cancelamento</button></div>');
@@ -1267,7 +1343,7 @@ async function deleteBlock(id){
   }catch(e){ toastErr('Erro: '+e.message); }
 }
 
-/* ── Relatórios ─────────────────────────────────────────────────── */
+/* \u2500\u2500 Relat\u00f3rios \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 function renderRelatorios(){
   const b=$i('admin-body'); if(!b) return;
   // Default sub-tab
@@ -1349,7 +1425,7 @@ async function renderRelContent(){
 function buildAnalise(cur,prev,year,month,mStart,mEnd){
   const months_pt=['Janeiro','Fevereiro','Mar\u00e7o','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 
-  /* ── Métricas base ── */
+  /* \u2500\u2500 M\u00e9tricas base \u2500\u2500 */
   const total   = cur.length;
   const prevTotal = prev.length;
   const revenue = cur.reduce((s,a)=>s+Number(a.price),0);
@@ -1357,16 +1433,16 @@ function buildAnalise(cur,prev,year,month,mStart,mEnd){
   const ticket  = total>0 ? revenue/total : 0;
   const prevTicket = prevTotal>0 ? prevRev/prevTotal : 0;
 
-  /* ── Clientes únicos ── */
+  /* \u2500\u2500 Clientes \u00fanicos \u2500\u2500 */
   const uClients = new Set(cur.map(a=>a.phone)).size;
   const prevUClients = new Set(prev.map(a=>a.phone)).size;
 
-  /* ── Taxa de retorno ── */
+  /* \u2500\u2500 Taxa de retorno \u2500\u2500 */
   const prevPhones = new Set(prev.map(a=>a.phone));
   const returning = cur.filter(a=>prevPhones.has(a.phone)).length;
   const returnRate = total>0 ? Math.round(returning/total*100) : 0;
 
-  /* ── Horário de pico ── */
+  /* \u2500\u2500 Hor\u00e1rio de pico \u2500\u2500 */
   const byHour={};
   cur.forEach(a=>{
     if(!a.time) return;
@@ -1375,7 +1451,7 @@ function buildAnalise(cur,prev,year,month,mStart,mEnd){
   });
   const peakHour = Object.entries(byHour).sort((a,b)=>b[1]-a[1])[0];
 
-  /* ── Dia da semana mais movimentado ── */
+  /* \u2500\u2500 Dia da semana mais movimentado \u2500\u2500 */
   const byDow={0:0,1:0,2:0,3:0,4:0,5:0,6:0};
   const dowNames=['Dom','Seg','Ter','Qua','Qui','Sex','S\u00e1b'];
   cur.forEach(a=>{
@@ -1385,17 +1461,17 @@ function buildAnalise(cur,prev,year,month,mStart,mEnd){
   });
   const peakDow = Object.entries(byDow).sort((a,b)=>b[1]-a[1])[0];
 
-  /* ── Serviço mais lucrativo ── */
+  /* \u2500\u2500 Servi\u00e7o mais lucrativo \u2500\u2500 */
   const svcRev={};
   cur.forEach(a=>{ svcRev[a.service_name]=(svcRev[a.service_name]||0)+Number(a.price); });
   const topSvc = Object.entries(svcRev).sort((a,b)=>b[1]-a[1])[0];
 
-  /* ── Dias sem agendamento ── */
+  /* \u2500\u2500 Dias sem agendamento \u2500\u2500 */
   const daysInMonth=new Date(year,month,0).getDate();
   const daysWithAppt=new Set(cur.map(a=>a.date)).size;
   const emptyDays=daysInMonth-daysWithAppt;
 
-  /* ── Helpers ── */
+  /* \u2500\u2500 Helpers \u2500\u2500 */
   function delta(cur,prev,isPrice){
     if(!prev) return '';
     const pct=Math.round((cur-prev)/prev*100);
@@ -1421,7 +1497,7 @@ function buildAnalise(cur,prev,year,month,mStart,mEnd){
     '</div>';
   }
 
-  /* ── Tendência ── */
+  /* \u2500\u2500 Tend\u00eancia \u2500\u2500 */
   let trendText, trendIcon;
   if(!prevTotal){ trendText='Primeiro m\u00eas com dados \u2014 sem comparativo dispon\u00edvel.'; trendIcon='\ud83d\udfe1'; }
   else if(total>prevTotal){ trendText='<b>Crescimento de '+(total-prevTotal)+' agendamento'+(total-prevTotal>1?'s':'')+' a mais</b> que o m\u00eas anterior ('+prevTotal+' \u2192 '+total+'). Tend\u00eancia positiva!'; trendIcon='\ud83d\udcc8'; }
@@ -1466,7 +1542,7 @@ function buildDados(cur, year, month){
   const ticket  = fPrice(revenue/total);
   const uC      = new Set(cur.map(a=>a.phone)).size;
 
-  /* por serviço */
+  /* por servi\u00e7o */
   const svcMap={};
   cur.forEach(a=>{
     if(!svcMap[a.service_name]) svcMap[a.service_name]={count:0,rev:0};
@@ -1504,7 +1580,7 @@ function buildDados(cur, year, month){
   const thStyle='padding:8px 10px;font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);text-align:';
 
   return (
-    /* resumo rápido */
+    /* resumo r\u00e1pido */
     '<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:20px;">'+
       ['<div><div style="font-size:18px;font-weight:800;color:var(--text);">'+total+'</div><div style="font-size:11px;color:var(--muted);margin-top:2px;">agendamentos</div></div>',
        '<div><div style="font-size:15px;font-weight:800;color:var(--gold);">'+fPrice(revenue)+'</div><div style="font-size:11px;color:var(--muted);margin-top:2px;">faturamento</div></div>',
@@ -1513,7 +1589,7 @@ function buildDados(cur, year, month){
       .map(v=>'<div style="background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;">'+v+'</div>').join('')+
     '</div>'+
 
-    /* por serviço */
+    /* por servi\u00e7o */
     '<div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:.4px;text-transform:uppercase;">Por servi\u00e7o</div>'+
     '<div style="overflow-x:auto;margin-bottom:20px;">'+
       '<table style="width:100%;border-collapse:collapse;background:var(--card);border:1.5px solid var(--line);border-radius:10px;overflow:hidden;">'+
@@ -1542,7 +1618,7 @@ function buildDados(cur, year, month){
   );
 }
 
-/* ── fim: Relatórios ─────────────────────────────────────────────── */
+/* \u2500\u2500 fim: Relat\u00f3rios \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 */
 
 
 function renderConfig(){
@@ -1579,7 +1655,7 @@ async function saveConfig(){
   btn.disabled=false; btn.textContent='Salvar informa\u00e7\u00f5es';
 }
 
-/* ── BOOKING ── */
+/* \u2500\u2500 BOOKING \u2500\u2500 */
 async function loadBooking(slug){
   if(!slug){ document.getElementById('app').innerHTML='<div class="loadscreen"><p style="color:var(--red);">Link inv\u00e1lido.</p></div>'; return; }
   try{
@@ -1604,7 +1680,7 @@ function bHeroHTML(){
   const sh=S.bShop;
   const items=[];
   if(sh.address) items.push('<div class="bshop-info-item">\ud83d\udccd '+sanitize(sh.address)+'</div>');
-  if(sh.instagram) items.push('<div class="bshop-info-item">\ud83d\udcf8 <a href="https://instagram.com/'+encodeURIComponent(sh.instagram.replace('@',''))+'" target="_blank">'+sanitize(sh.instagram)+'</a></div>');
+  if(sh.instagram){ const igHandle=sh.instagram.replace(/^@+/,'').trim(); items.push('<div class="bshop-info-item">\ud83d\udcf8 <a href="https://www.instagram.com/'+igHandle+'" target="_blank" rel="noopener">@'+igHandle+'</a></div>'); }
   if(sh.whatsapp) items.push('<div class="bshop-info-item">\ud83d\udcac <a href="https://wa.me/'+fmtWA(sh.whatsapp)+'" target="_blank">'+sanitize(sh.whatsapp)+'</a></div>');
   return '<div class="stripe"></div>'
     +'<header class="bhero"><div class="bhero-inner">'
@@ -1938,7 +2014,7 @@ async function bConfirmCancelAppt(id){
 function svgScissors(sz){ return '<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:'+sz+'px;height:'+sz+'px;"><circle cx="14" cy="14" r="6" stroke="currentColor" stroke-width="2.5"/><circle cx="14" cy="34" r="6" stroke="currentColor" stroke-width="2.5"/><path d="M18 18L40 40M40 8L18 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>'; }
 function svgLock(sz){ return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>'; }
 
-/* ── INIT ── */
+/* \u2500\u2500 INIT \u2500\u2500 */
 
 /* -- LANDING MEUS AGENDAMENTOS -- */
 function lpMyAppts(){
