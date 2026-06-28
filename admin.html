@@ -98,7 +98,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);min-hei
 .period-btns{display:flex;gap:4px;}
 .period-btn{padding:5px 12px;border-radius:7px;border:1.5px solid var(--line);background:transparent;color:var(--muted);font-family:var(--font-body);font-size:12px;font-weight:700;cursor:pointer;transition:.15s;}
 .period-btn.active{background:var(--card2);color:var(--gold);border-color:var(--gold-dim);}
-.line-wrap{background:var(--surface);border:1.5px solid var(--line);border-radius:13px;padding:16px 12px 10px;margin-bottom:20px;position:relative;}
+.line-wrap{background:var(--surface);border:1.5px solid var(--line);border-radius:13px;padding:16px 12px 10px;margin-bottom:20px;position:relative;cursor:pointer;transition:.15s;}
+.line-wrap:hover{border-color:var(--gold-dim);}
 #line-svg{width:100%;display:block;overflow:visible;}
 /* tooltip touch/hover */
 #line-tooltip{display:none;position:absolute;background:var(--card2);border:1.5px solid var(--gold);border-radius:9px;padding:8px 12px;font-size:13px;pointer-events:none;z-index:20;min-width:100px;}
@@ -154,6 +155,18 @@ tr:last-child td{border-bottom:none;}
 .rev-pct{font-size:11px;color:var(--subtle);margin-top:2px;}
 .rev-bar{height:3px;background:var(--card);border-radius:2px;margin-top:8px;overflow:hidden;}
 .rev-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));border-radius:2px;}
+
+/* MODAL EVOLUÇÃO */
+.evo-day-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid rgba(36,61,46,.4);}
+.evo-day-row:last-child{border-bottom:none;}
+.evo-date{font-family:var(--font-mono);font-size:13px;color:var(--muted);width:70px;flex-shrink:0;}
+.evo-bar-track{flex:1;background:var(--card);border-radius:3px;height:12px;overflow:hidden;}
+.evo-bar-fill{height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));border-radius:3px;transition:width .4s ease;}
+.evo-count{font-family:var(--font-mono);font-size:13px;color:var(--gold);width:24px;text-align:right;flex-shrink:0;}
+.evo-zero .evo-date{color:var(--subtle);}
+.evo-zero .evo-count{color:var(--subtle);}
+.evo-today{background:rgba(199,154,74,.06);border-radius:8px;padding:9px 8px;margin:0 -8px;}
+
 </style>
 </head>
 <body>
@@ -216,7 +229,7 @@ tr:last-child td{border-bottom:none;}
           <button class="period-btn" onclick="setPeriod(90,this)">90d</button>
         </div>
       </div>
-      <div class="line-wrap">
+      <div class="line-wrap" onclick="openEvoModal()">
         <svg id="line-svg" viewBox="0 0 400 160" preserveAspectRatio="none"></svg>
         <div id="line-tooltip"><div id="tt-date"></div><div id="tt-val"></div><div id="tt-lbl">agendamentos</div></div>
       </div>
@@ -250,6 +263,17 @@ tr:last-child td{border-bottom:none;}
         <tbody id="appts-tbody"><tr><td colspan="7"><div class="lc"><span class="spin"></span></div></td></tr></tbody></table>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- MODAL EVOLUÇÃO -->
+<div class="modal-overlay" id="evo-modal" onclick="if(event.target===this)closeEvoModal()">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="modal-title">📈 Evolução por dia</div>
+      <button class="modal-close" onclick="closeEvoModal()">✕</button>
+    </div>
+    <div class="modal-body" id="evo-modal-body"></div>
   </div>
 </div>
 
@@ -521,6 +545,48 @@ function pillStatus(s){
   return `<span class="pill ${m[s]||'pill-muted'}">${lb[s]||esc(s)||'—'}</span>`;
 }
 
+// ── MODAL EVOLUÇÃO ──
+function openEvoModal(){
+  document.getElementById('evo-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+  renderEvoModal();
+}
+function closeEvoModal(){
+  document.getElementById('evo-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'){ closeRevModal(); closeEvoModal(); } });
+
+function renderEvoModal(){
+  const body=document.getElementById('evo-modal-body');
+  const today=iso();
+  const days=Array.from({length:PERIOD},(_,i)=>iso(PERIOD-1-i));
+  const cnt={}; days.forEach(d=>cnt[d]=0);
+  ALL_APPTS.filter(a=>a.status!=='cancelled'&&cnt.hasOwnProperty(a.date)).forEach(a=>cnt[a.date]++);
+
+  const vals=days.map(d=>cnt[d]);
+  const total=vals.reduce((s,v)=>s+v,0);
+  const maxVal=Math.max(...vals,1);
+  const media=(total/days.length).toFixed(1);
+
+  body.innerHTML=`
+    <div class="modal-total" style="margin-bottom:16px;">
+      <div>
+        <div class="modal-total-label">Total ${PERIOD} dias</div>
+        <div style="font-size:11px;color:var(--subtle);margin-top:2px;">média ${media}/dia</div>
+      </div>
+      <div class="modal-total-value">${total}</div>
+    </div>
+    ${days.slice().reverse().map(d=>{
+      const v=cnt[d], isToday=d===today, isZero=v===0;
+      return `<div class="evo-day-row${isZero?' evo-zero':''}${isToday?' evo-today':''}">
+        <span class="evo-date">${fmtBR(d)}${isToday?' <span style="font-size:10px;color:var(--gold)">hoje</span>':''}</span>
+        <div class="evo-bar-track"><div class="evo-bar-fill" style="width:${(v/maxVal*100).toFixed(1)}%"></div></div>
+        <span class="evo-count">${v}</span>
+      </div>`;
+    }).join('')}`;
+}
+
 // ── MODAL RECEITA ──
 function openRevModal(){
   document.getElementById('rev-modal').classList.add('open');
@@ -531,8 +597,6 @@ function closeRevModal(){
   document.getElementById('rev-modal').classList.remove('open');
   document.body.style.overflow='';
 }
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeRevModal(); });
-
 function renderRevModal(){
   const body=document.getElementById('rev-modal-body');
   const d30=iso(30);
